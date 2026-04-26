@@ -23,14 +23,25 @@ Suomenkieliset patternit:
 - Ylipitkät virkkeet
 - Joka/jotka-kasautuminen
 - Virkakielisyys väärässä kontekstissa
+- Astevaihtelun välttely
+- Liiallinen kohteliaisuus
 
 Universaalit patternit (suomeksi):
 - Merkittävyyden liioittelu ("keskeinen", "ratkaiseva", "elintärkeä")
 - Mainosmainen kieli
 - Mielistelevä sävy ("Hyvä kysymys!")
+- Liiallinen varautuminen
 - Täytesanat ("On syytä huomata, että...")
 - Geneerinen lopetus ("Tulevaisuus näyttää valoisalta")
-- Ja 10 muuta — ks. [references/patterns.md](references/patterns.md)
+- Epämääräiset viittaukset
+- "Haasteista huolimatta" -kaava
+- Kolmen sääntö ja synonyymikierto
+- Partisiippirakenteet
+- Kopulan välttely
+- Negatiivinen rinnastus
+- Keinotekoiset skaalaviittaukset
+- Tietokatkos-vastuuvapauslausekkeet
+- Kontrastiivinen kieltorakenne
 
 ### Kielioppisäännöt
 

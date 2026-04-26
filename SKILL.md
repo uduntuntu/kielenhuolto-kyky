@@ -1,11 +1,6 @@
 ---
-name: suomettaja
-description: >
-  Use when writing, editing, reviewing, or translating Finnish text. Use when the user asks to humanize,
-  proofread, or improve Finnish content. Use when Finnish text sounds robotic, uses anglicisms, has AI
-  patterns (excessive passives, filler phrases, adjective stacking, generic endings), or has grammar errors
-  (compound words, punctuation, capitalization). Use when creating Finnish website copy, documents, or
-  marketing materials.
+name: kielenhuolto
+description: Suomen kielenhuolto ja kielen luonnollistaja
 ---
 
 # Suomen Mestari

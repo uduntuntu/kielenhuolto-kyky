@@ -6,11 +6,11 @@ A Claude Code skill that improves Finnish text quality. Removes AI-generated pat
 
 ## Mitä se tekee
 
-**Luonnollistaminen** — Tunnistaa ja poistaa AI-generoidun tekstin tunnusmerkit (26 patternia). Tekee tekstistä sellaista, jonka suomalainen ihminen olisi voinut kirjoittaa.
+**Luonnollistaminen** — Tunnistaa ja poistaa AI-generoidun tekstin tunnusmerkit (27 patternia). Tekee tekstistä sellaista, jonka suomalainen ihminen olisi voinut kirjoittaa.
 
 **Kielenhuolto** — Tarkistaa oikeinkirjoituksen, kieliopin ja pilkutuksen Kielitoimiston ohjepankin sääntöjen mukaisesti.
 
-### Tunnistettavat AI-patternit (26 kpl)
+### Tunnistettavat AI-patternit (27 kpl)
 
 Suomenkieliset patternit:
 - Passiivin ylikäyttö
@@ -30,7 +30,7 @@ Universaalit patternit (suomeksi):
 - Mielistelevä sävy ("Hyvä kysymys!")
 - Täytesanat ("On syytä huomata, että...")
 - Geneerinen lopetus ("Tulevaisuus näyttää valoisalta")
-- Ja 11 muuta — ks. [references/patterns.md](references/patterns.md)
+- Ja 10 muuta — ks. [references/patterns.md](references/patterns.md)
 
 ### Kielioppisäännöt
 
@@ -103,7 +103,7 @@ Oikolue ja luonnollista: [teksti]
 suomettaja/
   SKILL.md                  # Pääskilli: rooli, prosessi, säännöt
   references/
-    patterns.md             # Kaikki 26 AI-patternia esimerkkeineen
+    patterns.md             # Kaikki 27 AI-patternia esimerkkeineen
     kielioppi.md            # Kielitoimiston ohjepankin säännöt
   custom_references/        # Omat lisäreferenssit (brändin ääni, sanastot)
     README.md
@@ -144,7 +144,7 @@ Tarkemmat ohjeet ja esimerkit: [`custom_references/README.md`](custom_references
 
 Skill yhdistää kaksi MIT-lisensoitua avoimen lähdekoodin projektia:
 
-- **[Hakku/finnish-humanizer](https://github.com/Hakku/finnish-humanizer)** — 26 AI-patternia ja suomalaisen kirjoittajaäänen kuvaus
+- **[Hakku/finnish-humanizer](https://github.com/Hakku/finnish-humanizer)** — 27 AI-patternia ja suomalaisen kirjoittajaäänen kuvaus
 - **[akunikkola/suomi-finnish-skill](https://github.com/akunikkola/suomi-finnish-skill)** — Kielitoimiston ohjepankkiin perustuva kielioppiohjeistus
 
 Kielioppisäännöt perustuvat:

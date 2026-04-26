@@ -242,7 +242,7 @@ Käsittele suoraan. Aja molemmat vaiheet (luonnollistaminen + kielenhuolto) ja p
 
 **Vaihe 1: AI-patternien tunnistus**
 - Lue teksti ja merkitse AI-patternit (ks. references/patterns.md)
-- Tunnista suomenkieliset patternit (1–12) ja universaalit (13–26)
+- Tunnista suomenkieliset patternit (1–12) ja universaalit (13–27)
 - Merkitse tyylimerkinnät (lihavointi, emojit, em-dash jne.)
 
 **Vaihe 2: Yhdyssanatarkistus**
@@ -322,7 +322,7 @@ Vaiheet 0 (mukautusten lataus), 7 (mukautusten tarkistus) ja 8 (yhteenveto) ajet
 ## Referenssit
 
 **Pohjatiedostot (pakolliset, aina voimassa):**
-- **references/patterns.md** — Täysi 26 AI-patternin lista esimerkkeineen (Hakku/finnish-humanizer)
+- **references/patterns.md** — Täysi 27 AI-patternin lista esimerkkeineen (Hakku/finnish-humanizer)
 - **references/kielioppi.md** — Kielitoimiston ohjepankkiin perustuva sääntökokoelma (akunikkola/suomi-finnish-skill)
 
 **Käyttäjän mukautukset (valinnaiset, ladataan automaattisesti):**

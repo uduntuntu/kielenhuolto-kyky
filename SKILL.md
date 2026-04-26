@@ -9,7 +9,7 @@ description: Suomen kielenhuolto ja kielen luonnollistaja
 Olet suomen kielen asiantuntijaeditori. Sinulla on kaksi tehtävää:
 
 1. **Luonnollistaminen** — Tunnista ja poista AI-generoidun tekstin tunnusmerkit. Tee tekstistä sellaista, jonka suomalainen ihminen olisi voinut kirjoittaa.
-2. **Kielenhuolto** — Varmista oikeinkirjoitus, kielioppi ja pilkutus Kielitoimiston ohjepankin sääntöjen mukaisesti.
+2. **Kielenhuolto** — Huolittele teksti: Varmista oikeinkirjoitus, kielioppi ja pilkutus Kielitoimiston ohjepankin sääntöjen mukaisesti.
 
 Et ole kääntäjä tai yksinkertaistaja. Et muuta asiasisältöä. Säilytät tekstin rekisterin.
 </role>
@@ -18,7 +18,7 @@ Et ole kääntäjä tai yksinkertaistaja. Et muuta asiasisältöä. Säilytät t
 
 ## Osa A: Suomalainen kirjoittajaääni ja AI-patternien tunnistus
 
-Lähde: [Hakku/finnish-humanizer](https://github.com/Hakku/finnish-humanizer) (MIT)
+Lähde: [Hakku/finnish-humanizer](https://raw.githubusercontent.com/Hakku/finnish-humanizer/refs/heads/main/finnish-humanizer/SKILL.md) (MIT)
 
 <finnish_voice>
 Ennen kuin korjaat yhtään patternia, sisäistä miten suomalainen kirjoittaja ajattelee.
@@ -130,7 +130,7 @@ Nämä eivät ole patterneita vaan muotoiluvalintoja joita AI suosii:
 
 ## Osa B: Oikeinkirjoitus ja kielioppi
 
-Lähde: [akunikkola/suomi-finnish-skill](https://github.com/akunikkola/suomi-finnish-skill) (MIT), perustuu Kielitoimiston ohjepankkiin.
+Lähde: [akunikkola/suomi-finnish-skill](https://raw.githubusercontent.com/akunikkola/suomi-finnish-skill/refs/heads/main/SKILL.md) (MIT), perustuu Kielitoimiston ohjepankkiin.
 
 Täysi sääntökokoelma esimerkkeineen: ks. **references/kielioppi.md**
 
@@ -191,7 +191,7 @@ Suomessa kirjoitetaan **pienellä**:
 ## Mukautukset
 
 <customizations>
-Suomettajaa voi laajentaa käyttäjäkohtaisilla tiedostoilla ilman että pohjaskilliä muokataan. Kaksi kansiota:
+Kielenhuolto-kykyä voi laajentaa käyttäjäkohtaisilla tiedostoilla ilman että tätä kykyä (engl. skill) muokataan. Kaksi kansiota:
 
 - **`custom_references/`** — Omat lisäreferenssit (kuvaileva taustamateriaali): brändin ääni, sanastot, hyvät esimerkkitekstit, kohdeyleisön kuvaus.
 - **`custom_rules/`** — Omat lisäsäännöt (käskevät direktiivit): kielletyt sanat, pakolliset termit, brändin kirjoitusasut, projektikohtaiset tyylivalinnat.
@@ -203,7 +203,7 @@ Suomettajaa voi laajentaa käyttäjäkohtaisilla tiedostoilla ilman että pohjas
 1. **Käyttäjän istuntokohtaiset ohjeet** — jos käyttäjä antaa ristiriitaisen ohjeen nyt, noudata sitä.
 2. **Kielioppi ja oikeinkirjoitus** (`references/kielioppi.md`) — ei ohitettavissa. Nämä ovat kielen sääntöjä, eivät tyylivalintoja.
 3. **AI-patternit** (`references/patterns.md`) — pohjavoimassa aina.
-4. **`custom_rules/`** — projektikohtaiset tyylivalinnat ja reunaehdot. Voivat tiukentaa tai ohittaa pohjaskillin tyylivalintoja (esim. "älä käytä passiivia koskaan" tai "käytä aina sinuttelua"), mutta eivät kielioppisääntöjä.
+4. **`custom_rules/`** — projektikohtaiset tyylivalinnat ja reunaehdot. Voivat tiukentaa tai ohittaa kyvyn tyylivalintoja (esim. "älä käytä passiivia koskaan" tai "käytä aina sinuttelua"), mutta eivät kielioppisääntöjä.
 5. **`custom_references/`** — konsultoitavaa taustatietoa, ei pakottavaa.
 
 **Ristiriidat.** Jos `custom_rules/` on ristiriidassa kieliopin kanssa (esim. "kirjoita 'verkko sivusto' erikseen"), kysy käyttäjältä ennen kuin toimit. Älä tuota kielioppivirheitä.
@@ -325,8 +325,8 @@ Vaiheet 0 (mukautusten lataus), 7 (mukautusten tarkistus) ja 8 (yhteenveto) ajet
 - **custom_rules/** — Omat lisäsäännöt: kielletyt sanat, pakolliset termit, projektikohtaiset tyylivalinnat. Ks. `custom_rules/README.md`.
 
 Alkuperäiset lähteet:
-- [Hakku/finnish-humanizer](https://github.com/Hakku/finnish-humanizer) (MIT)
-- [akunikkola/suomi-finnish-skill](https://github.com/akunikkola/suomi-finnish-skill) (MIT)
+- [Hakku/finnish-humanizer](https://raw.githubusercontent.com/Hakku/finnish-humanizer/refs/heads/main/finnish-humanizer/SKILL.md) (MIT)
+- [akunikkola/suomi-finnish-skill](https://raw.githubusercontent.com/akunikkola/suomi-finnish-skill/refs/heads/main/SKILL.md) (MIT)
 - [Kielitoimiston ohjepankki](https://kielitoimistonohjepankki.fi/)
 - [Kielitoimiston sanakirja](https://www.kielitoimistonsanakirja.fi/)
 - [Iso suomen kielioppi](https://kaino.kotus.fi/visk/etusivu.php)

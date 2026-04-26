@@ -1,0 +1,6 @@
+interface:
+  display_name: "Kielenhuolto"
+  short_description: "Suomen kielenhuolto ja luonnollistaminen"
+
+policy:
+  allow_implicit_invocation: true

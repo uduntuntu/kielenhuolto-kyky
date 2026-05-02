@@ -1,22 +1,22 @@
 # custom_references/
 
-Tähän kansioon voit lisätä omia **referenssitiedostoja**, jotka Suomettaja lukee automaattisesti osaksi kontekstiaan. Referenssit ovat kuvailevaa taustamateriaalia: brändin ääni, sanasto, esimerkkejä hyvästä tekstistä, toimialasanakirjat.
+Tähän kansioon voit lisätä omia **referenssitiedostoja**, jotka Kielenhuolto-kyky lukee automaattisesti osaksi kontekstiaan. Referenssit ovat kuvailevaa taustamateriaalia: brändin ääni, sanasto, esimerkkejä hyvästä tekstistä ja toimialasanakirjat.
 
 Pohjareferenssit (`references/patterns.md`, `references/kielioppi.md`) pysyvät aina voimassa. Tämä kansio **laajentaa** niitä.
 
 ## Mihin tätä käytetään
 
-- **Brändin ääni** — miten yrityksesi tai tuotteesi "kuulostaa" suomeksi
-- **Sanastot ja glossarit** — toimialan termistö, kielletyt tai suositellut sanat
-- **Esimerkkitekstit** — hyviä ja huonoja esimerkkejä omasta tuotannostasi
-- **Kohdeyleisö** — kenelle kirjoitat (asiantuntijat, kuluttajat, B2B)
-- **Tyylioppaat** — omat tai asiakkaan tyyliohjeet
+- **Brändin ääni** – miten yrityksesi tai tuotteesi "kuulostaa" suomeksi
+- **Sanastot ja glossarit** – toimialan termistö, kielletyt tai suositellut sanat
+- **Esimerkkitekstit** – hyviä ja huonoja esimerkkejä omasta tuotannostasi
+- **Kohdeyleisö** – kenelle kirjoitat (asiantuntijat, kuluttajat, B2B)
+- **Tyylioppaat** – omat tai asiakkaan tyyliohjeet
 
 ## Miten lisätä referenssi
 
 1. Luo `.md`-tiedosto tähän kansioon (esim. `brandi_aani.md`, `sanasto.md`)
 2. Kirjoita sisältö luettavaan muotoon: otsikot, listat, esimerkit ennen/jälkeen
-3. Suomettaja lukee tiedoston automaattisesti seuraavassa käytössä
+3. Kielenhuolto-kyky lukee tiedoston automaattisesti seuraavassa käytössä
 
 ## Esimerkkitiedostoja
 
@@ -45,8 +45,8 @@ custom_references/
 
 ## Ero `custom_rules/`-kansioon
 
-- **`custom_references/`** = taustamateriaali, jota Suomettaja konsultoi (kuvaileva)
-- **`custom_rules/`** = pakottavat säännöt, joita Suomettaja noudattaa (käskevä)
+- **`custom_references/`** = taustamateriaali, jota Kielenhuolto-kyky konsultoi (kuvaileva)
+- **`custom_rules/`** = pakottavat säännöt, joita Kielenhuolto-kyky noudattaa (käskevä)
 
 Jos epäröit kumpaan laittaa: jos sisältö on "älä koskaan / aina käytä" -muotoista, se kuuluu `custom_rules/`-kansioon. Jos se on "tässä on taustaa ja esimerkkejä", se kuuluu tänne.
 

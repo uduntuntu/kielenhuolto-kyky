@@ -1,14 +1,22 @@
-# Kielenhuolto — Finnish Language Editing Skill for AI-agents
+# Kielenhuolto-kyky – suomen kielenhuoltoa AI-agenteille
 
-Kyky AI-agenteille - aluksi Claude Code ja OpenAI Codex. Parantaa suomen kielen laatua, poistaa AI-generoidun tekstin tunnusmerkkejä, noudattaa Kielitoimiston ohjepankin sääntöjä ja inhimillistää robottimaista tekstiä, eli tekee siitä luontevampaa.
+Kyky AI-agenteille – aluksi Claude Code ja OpenAI Codex. Kielenhuolto-kyky parantaa suomen kielen laatua yhdistämällä Kielitoimiston ohjepankkiin perustuvan kielenhuollon ja Finnish Humanizer -patternit, jotka auttavat poistamaan robottimaisia AI-tekstin tunnusmerkkejä. Kyky säilyttää tekstin merkityksen ja rekisterin.
+
+Kielenhuolto-kyky perustuu Harri Sipolan [Hakku/finnish-humanizer](https://github.com/Hakku/finnish-humanizer) -projektiin ja Aku Nikkolan [akunikkola/suomi-finnish-skill](https://github.com/akunikkola/suomi-finnish-skill) -projektiin. Tämä repo on forkattu Janne Ikolan [janneikola/suomettaja-skill](https://github.com/janneikola/suomettaja-skill) -reposta.
+
+---
+
+## Brief introduction
+
+Kielenhuolto-kyky is an Agent Skill for improving Finnish text. It is based on Harri Sipola's [Hakku/finnish-humanizer](https://github.com/Hakku/finnish-humanizer), Aku Nikkola's [akunikkola/suomi-finnish-skill](https://github.com/akunikkola/suomi-finnish-skill), and is forked from Janne Ikola's [janneikola/suomettaja-skill](https://github.com/janneikola/suomettaja-skill). It combines Finnish proofreading and grammar guidance with Finnish Humanizer patterns that help remove robotic, AI-generated phrasing while preserving meaning and register.
 
 ---
 
 ## Mitä se tekee
 
-**Inhimillistäminen** — Tunnistaa ja poistaa AI-generoidun tekstin tunnusmerkit (27 patternia). Tekee tekstistä sellaista, jonka suomalainen ihminen olisi voinut kirjoittaa.
+**Inhimillistäminen** – Tunnistaa ja poistaa AI-generoidun tekstin tunnusmerkit (27 patternia). Tekee tekstistä sellaista, jonka suomalainen ihminen olisi voinut kirjoittaa.
 
-**Kielenhuolto** — Tarkistaa oikeinkirjoituksen, kieliopin ja pilkutuksen Kielitoimiston ohjepankin sääntöjen mukaisesti.
+**Kielenhuolto** – Tarkistaa oikeinkirjoituksen, kieliopin ja pilkutuksen Kielitoimiston ohjepankin sääntöjen mukaisesti.
 
 ### Tunnistettavat AI-patternit (27 kpl)
 
@@ -55,7 +63,7 @@ Universaalit patternit (suomeksi):
 
 ## Asennus
 
-### AI-koodiagentit - aluksi Claude Code ja OpenAI Codex
+### AI-koodiagentit – aluksi Claude Code ja OpenAI Codex
 
 ```bash
 # Claude Code
@@ -89,7 +97,7 @@ Kyky aktivoituu automaattisesti seuraavassa Claude Code- tai Codex-sessiossa.
 Kyky aktivoituu automaattisesti kun:
 - Kirjoitat tai muokkaat suomenkielistä tekstiä
 - Pyydät "humanisoimaan", "oikolukemaan", "huolittelemaan" tai "parantamaan" suomea
-- Teksti kuulostaa robottimaaiselta tai käyttää anglismeja
+- Teksti kuulostaa robottimaiselta tai käyttää anglismeja
 
 Voit myös kutsua sitä suoraan:
 
@@ -107,7 +115,7 @@ Oikolue ja luonnollista: [teksti]
 > Tämä on erittäin merkittävä kehitysaskel, joka tulee vaikuttamaan laajasti alan tulevaisuuteen. On syytä huomata, että kyseinen innovaatio tarjoaa lukuisia mahdollisuuksia eri sidosryhmille. Haasteista huolimatta tulevaisuus näyttää valoisalta.
 
 **Jälkeen:**
-> Iso juttu alalle. En ole varma mihin tämä lopulta johtaa, mutta hyötyjiä on — varsinkin ne jotka ovat odottaneet tällaista jo vuosia.
+> Iso juttu alalle. En ole varma mihin tämä lopulta johtaa, mutta hyötyjiä on – varsinkin ne jotka ovat odottaneet tällaista jo vuosia.
 
 ---
 
@@ -133,10 +141,10 @@ kielenhuolto/
 
 Voit laajentaa Kielenhuolto-kykyä omilla tiedostoilla ilman että tätä kykyä (engl. skill) muokataan. Kaksi kansiota:
 
-- **`custom_references/`** — kuvaileva taustamateriaali: brändin ääni, sanastot, hyvät esimerkit, kohdeyleisön kuvaus
-- **`custom_rules/`** — käskevät direktiivit: kielletyt sanat, pakolliset termit, projektikohtaiset tyylivalinnat
+- **`custom_references/`** – kuvaileva taustamateriaali: brändin ääni, sanastot, hyvät esimerkit, kohdeyleisön kuvaus
+- **`custom_rules/`** – käskevät direktiivit: kielletyt sanat, pakolliset termit, projektikohtaiset tyylivalinnat
 
-Lisää vain `.md`-tiedostoja kansioihin. Kielenhuolto lukee ne automaattisesti seuraavassa käytössä.
+Lisää vain `.md`-tiedostoja kansioihin. Kielenhuolto-kyky lukee ne automaattisesti seuraavassa käytössä.
 
 **Esimerkki:**
 
@@ -158,8 +166,8 @@ Tarkemmat ohjeet ja esimerkit: [`custom_references/README.md`](custom_references
 
 Kyky yhdistää kaksi MIT-lisensoitua avoimen lähdekoodin projektia:
 
-- **[Hakku/finnish-humanizer](https://github.com/Hakku/finnish-humanizer)** — 27 AI-patternia ja suomalaisen kirjoittajaäänen kuvaus
-- **[akunikkola/suomi-finnish-skill](https://github.com/akunikkola/suomi-finnish-skill)** — Kielitoimiston ohjepankkiin perustuva kielioppiohjeistus
+- **[Hakku/finnish-humanizer](https://github.com/Hakku/finnish-humanizer)** – 27 AI-patternia ja suomalaisen kirjoittajaäänen kuvaus
+- **[akunikkola/suomi-finnish-skill](https://github.com/akunikkola/suomi-finnish-skill)** – Kielitoimiston ohjepankkiin perustuva kielioppiohjeistus
 
 Kielioppisäännöt perustuvat:
 - [Kielitoimiston ohjepankki](https://kielitoimistonohjepankki.fi/)
@@ -170,4 +178,4 @@ Kielioppisäännöt perustuvat:
 
 ## Lisenssi
 
-MIT — ks. [LICENSE](LICENSE)
+MIT – ks. [LICENSE](LICENSE)

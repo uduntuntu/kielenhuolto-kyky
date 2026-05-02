@@ -1,5 +1,5 @@
 interface:
-  display_name: "Kielenhuolto"
+  display_name: "Kielenhuolto-kyky"
   short_description: "Suomen kielenhuolto ja luonnollistaminen"
 
 policy:

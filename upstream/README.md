@@ -1,10 +1,10 @@
-# Upstream Sources
+# Upstream-lähteet
 
-This directory contains Git submodules for the original source projects used to maintain this skill.
+Tämä hakemisto sisältää Git-submodulet alkuperäisiin lähdeprojekteihin, joiden avulla tätä kykyä ylläpidetään.
 
-- `finnish-humanizer/`: Harri Sipola's Finnish Humanizer and AI-pattern taxonomy.
-- `suomi-finnish-skill/`: Aku Nikkola's Finnish proofreading and grammar guidance.
+- `finnish-humanizer/`: Harri Sipolan Finnish Humanizer ja AI-patternien taksonomia.
+- `suomi-finnish-skill/`: Aku Nikkolan suomen kielenhuollon ja kieliopin ohjeistus.
 
-These submodules are maintenance sources, not runtime references. The skill itself uses the curated files in `references/`.
+Nämä submodulet ovat ylläpitolähteitä, eivät ajonaikaisia referenssejä. Kyky käyttää kuratoituja tiedostoja `references/`-hakemistossa.
 
-Do not edit files under `upstream/` directly. Update the submodules, review their diffs, and merge relevant changes into `references/patterns.md` or `references/kielioppi.md`.
+Älä muokkaa `upstream/`-hakemiston tiedostoja suoraan. Päivitä submodulet, tarkista niiden diffi ja siirrä olennaiset muutokset tiedostoihin `references/patterns.md` tai `references/kielioppi.md`.

@@ -1,0 +1,6 @@
+[submodule "upstream/finnish-humanizer"]
+	path = upstream/finnish-humanizer
+	url = https://github.com/Hakku/finnish-humanizer
+[submodule "upstream/suomi-finnish-skill"]
+	path = upstream/suomi-finnish-skill
+	url = https://github.com/akunikkola/suomi-finnish-skill

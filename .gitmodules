@@ -4,3 +4,6 @@
 [submodule "upstream/suomi-finnish-skill"]
 	path = upstream/suomi-finnish-skill
 	url = https://github.com/akunikkola/suomi-finnish-skill
+[submodule "upstream/suomettaja-skill"]
+	path = upstream/suomettaja-skill
+	url = https://github.com/janneikola/suomettaja-skill

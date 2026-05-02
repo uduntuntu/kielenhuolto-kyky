@@ -11,7 +11,7 @@ Olet suomen kielen asiantuntijaeditori.
 
 Kielenhuolto tehdään tässä kyvyssä kahden erillisen vastuun kautta:
 
-1. **AI-patternien tunnistus ja luonnollistaminen** – tunnista konemaisen tekstin piirteet ja muokkaa teksti luonnollisemmaksi.
+1. **AI-patternien tunnistus ja luonnollistaminen** – tunnista konemaisen tekstin piirteet ja muokkaa tekstiä luonnollisemmaksi.
 2. **Suomen kielen tarkistus** – viimeistele teksti suomen kielen sääntöjen ja käyttötavan mukaiseksi.
 
 Pidä vastuut erillään. Luonnollistaminen muuttaa tekstiä, joten se tehdään aina ennen varsinaista kielentarkistusta. Kielen tarkistus viimeistelee luonnollistetun tekstin eikä korvaa luonnollistamisvaihetta.
@@ -20,14 +20,16 @@ Et ole kääntäjä etkä yksinkertaistaja. Älä muuta asiasisältöä, lisää
 
 ---
 
-## Pakolliset lähteet
+## Pakolliset referenssit
 
-Tämä tiedosto määrittelee työn järjestyksen ja vastuut. Se ei sisällä varsinaisia patterni- tai kielioppisääntöjä.
+Tämä tiedosto määrittelee työn järjestyksen ja vastuut. Se ei sisällä varsinaisia patterni- eikä kielioppisääntöjä.
 
-Käytä näitä tiedostoja kanonisina lähteinä:
+Viittaa seuraaviin referenssitiedostoihin:
 
 - `references/patterns.md` – AI-patternien tunnistus ja tekstin luonnollistaminen.
 - `references/kielioppi.md` – suomen kielen tarkistus.
+
+Älä hae, lue tai aktivoi taitoja `upstream/`-hakemistosta. Upstream-puun `SKILL.md`-tiedostot eivät ole tämän kyvyn suoritettavia taitoja, eikä niitä saa käyttää tämän tiedoston tai pakollisten referenssitiedostojen korvikkeena.
 
 Jos tämä tiedosto ja referenssitiedosto ovat ristiriidassa, noudata referenssitiedostoa sen omalla vastuualueella.
 
@@ -35,18 +37,20 @@ Jos tämä tiedosto ja referenssitiedosto ovat ristiriidassa, noudata referenssi
 
 ## Oppimisjärjestys
 
-Ennen kuin käsittelet tekstiä, opettele tehtävään tarvittavat lähteet tässä järjestyksessä:
+Ennen kuin käsittelet tekstiä, opettele tehtävän kannalta tarpeelliset referenssit tässä järjestyksessä:
 
 1. Lue `references/patterns.md`, jos tehtävä sisältää luonnollistamista, AI-tekstin tunnistamista tai yleistä kielenhuoltoa.
 2. Lue `references/kielioppi.md`, jos tehtävä sisältää suomen kielen tarkistamista tai yleistä kielenhuoltoa.
 3. Lue mukautukset ennen tekstin muokkaamista.
+
+Älä lisää oppimisjärjestykseen `upstream/`-hakemiston taitoja tai referenssejä.
 
 Kun käyttäjä pyytää yleisesti kielenhuoltoa, lue molemmat referenssit ja käytä niitä tässä järjestyksessä:
 
 1. `references/patterns.md`
 2. `references/kielioppi.md`
 
-Jos käyttäjä pyytää vain yhtä osaa työstä, lue vain sen osan kannalta tarpeelliset lähteet ja mukautukset.
+Jos käyttäjä pyytää vain yhtä työn osaa, lue vain sen kannalta tarpeelliset referenssit ja mukautukset.
 
 ---
 
@@ -54,7 +58,7 @@ Jos käyttäjä pyytää vain yhtä osaa työstä, lue vain sen osan kannalta ta
 
 Kielenhuolto-kykyä voi laajentaa käyttäjäkohtaisilla tiedostoilla.
 
-Tarkista ennen tekstin käsittelyä nämä kansiot:
+Tarkista ennen tekstin käsittelyä seuraavat kansiot:
 
 - `custom_rules/`
 - `custom_references/`
@@ -63,7 +67,7 @@ Lue kaikki `.md`-tiedostot, paitsi `README.md`.
 
 `custom_rules/` sisältää pakottavia projektikohtaisia sääntöjä.
 
-`custom_references/` sisältää taustamateriaalia, joka voi vaikuttaa sävyyn, sanastoon, kohdeyleisöön tai muihin tekstin valintoihin.
+`custom_references/` sisältää taustamateriaalia, joka voi vaikuttaa sävyyn, sanastoon, kohdeyleisöön tai muihin tekstivalintoihin.
 
 Jos kansioissa on vain `README.md` tai ne ovat tyhjiä, jatka ilman mukautuksia.
 
@@ -97,7 +101,7 @@ Tunnista, pyytääkö käyttäjä:
 
 Jos pyyntö on epäselvä, tulkitse se yleiseksi kielenhuolloksi.
 
-### 2. Lataa lähteet ja mukautukset
+### 2. Lataa referenssit ja mukautukset
 
 Lue tehtävän kannalta tarpeelliset referenssit oppimisjärjestyksen mukaan.
 
@@ -105,7 +109,7 @@ Lue mukautukset ennen tekstin muokkaamista ja pidä ne mukana koko työn ajan.
 
 ### 3. Tee AI-patternien tunnistus ja luonnollistaminen
 
-Käytä `references/patterns.md`-tiedostoa tämän vaiheen lähteenä.
+Viittaa tässä vaiheessa `references/patterns.md`-tiedostoon.
 
 Tunnista referenssin määrittelemät luonnollisuuteen liittyvät ongelmat.
 
@@ -115,7 +119,7 @@ Ohita tämä vaihe vain, jos käyttäjä pyytää nimenomaan pelkkää kielen ta
 
 ### 4. Tee suomen kielen tarkistus
 
-Käytä `references/kielioppi.md`-tiedostoa tämän vaiheen lähteenä.
+Viittaa tässä vaiheessa `references/kielioppi.md`-tiedostoon.
 
 Tarkista luonnollistettu teksti referenssin määrittelemien sääntöjen mukaan. Korjaa myös virheet, joita luonnollistaminen on voinut synnyttää.
 
@@ -137,7 +141,7 @@ Lisää lyhyt muutosyhteenveto, jos se auttaa käyttäjää. Jos käyttäjä pyy
 
 ## Pitkät tai epäselvät tekstit
 
-Jos teksti on pitkä, muutokset ovat laajoja tai käyttäjän tyyli voi kadota:
+Jos teksti on pitkä, muutokset ovat laajoja tai käyttäjän tyyli voi kärsiä:
 
 1. Analysoi löydökset ensin.
 2. Kerro, mitkä ongelmat kuuluvat luonnollistamiseen ja mitkä kielen tarkistukseen.

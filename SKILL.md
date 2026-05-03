@@ -1,5 +1,5 @@
 ---
-name: kielenhuolto
+name: kielenhuolto-kyky
 description: Suomen kielenhuolto ja tekstin luonnollistaminen
 ---
 

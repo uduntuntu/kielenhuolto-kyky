@@ -1,16 +1,24 @@
-# Suomettaja — Finnish Language Editing Skill for Claude Code
+# Kielenhuolto-kyky – suomen kielenhuoltoa AI-agenteille
 
-A Claude Code skill that improves Finnish text quality. Removes AI-generated patterns, enforces grammar rules from Kielitoimiston ohjepankki, and naturalizes robotic-sounding content into authentic Finnish voice.
+Kyky AI-agenteille – aluksi Claude Code ja OpenAI Codex. Kielenhuolto-kyky parantaa suomen kielen laatua yhdistämällä Kielitoimiston ohjepankkiin perustuvan kielenhuollon ja Finnish Humanizer -patternit, jotka auttavat poistamaan robottimaisia AI-tekstin tunnusmerkkejä. Kyky säilyttää tekstin merkityksen ja rekisterin.
+
+Kielenhuolto-kyky perustuu Harri Sipolan [Hakku/finnish-humanizer](https://github.com/Hakku/finnish-humanizer) -projektiin ja Aku Nikkolan [akunikkola/suomi-finnish-skill](https://github.com/akunikkola/suomi-finnish-skill) -projektiin. Tämä repo on forkattu Janne Ikolan [janneikola/suomettaja-skill](https://github.com/janneikola/suomettaja-skill) -reposta.
+
+---
+
+## Brief introduction
+
+Kielenhuolto-kyky is an Agent Skill for improving Finnish text. It is based on Harri Sipola's [Hakku/finnish-humanizer](https://github.com/Hakku/finnish-humanizer), Aku Nikkola's [akunikkola/suomi-finnish-skill](https://github.com/akunikkola/suomi-finnish-skill), and is forked from Janne Ikola's [janneikola/suomettaja-skill](https://github.com/janneikola/suomettaja-skill). It combines Finnish proofreading and grammar guidance with Finnish Humanizer patterns that help remove robotic, AI-generated phrasing while preserving meaning and register.
 
 ---
 
 ## Mitä se tekee
 
-**Luonnollistaminen** — Tunnistaa ja poistaa AI-generoidun tekstin tunnusmerkit (26 patternia). Tekee tekstistä sellaista, jonka suomalainen ihminen olisi voinut kirjoittaa.
+**Inhimillistäminen** – Tunnistaa ja poistaa AI-generoidun tekstin tunnusmerkit (27 patternia). Tekee tekstistä sellaista, jonka suomalainen ihminen olisi voinut kirjoittaa.
 
-**Kielenhuolto** — Tarkistaa oikeinkirjoituksen, kieliopin ja pilkutuksen Kielitoimiston ohjepankin sääntöjen mukaisesti.
+**Kielenhuolto** – Tarkistaa oikeinkirjoituksen, kieliopin ja pilkutuksen Kielitoimiston ohjepankin sääntöjen mukaisesti.
 
-### Tunnistettavat AI-patternit (26 kpl)
+### Tunnistettavat AI-patternit (27 kpl)
 
 Suomenkieliset patternit:
 - Passiivin ylikäyttö
@@ -23,14 +31,25 @@ Suomenkieliset patternit:
 - Ylipitkät virkkeet
 - Joka/jotka-kasautuminen
 - Virkakielisyys väärässä kontekstissa
+- Astevaihtelun välttely
+- Liiallinen kohteliaisuus
 
 Universaalit patternit (suomeksi):
 - Merkittävyyden liioittelu ("keskeinen", "ratkaiseva", "elintärkeä")
 - Mainosmainen kieli
 - Mielistelevä sävy ("Hyvä kysymys!")
+- Liiallinen varautuminen
 - Täytesanat ("On syytä huomata, että...")
 - Geneerinen lopetus ("Tulevaisuus näyttää valoisalta")
-- Ja 11 muuta — ks. [references/patterns.md](references/patterns.md)
+- Epämääräiset viittaukset
+- "Haasteista huolimatta" -kaava
+- Kolmen sääntö ja synonyymikierto
+- Partisiippirakenteet
+- Kopulan välttely
+- Negatiivinen rinnastus
+- Keinotekoiset skaalaviittaukset
+- Tietokatkos-vastuuvapauslausekkeet
+- Kontrastiivinen kieltorakenne
 
 ### Kielioppisäännöt
 
@@ -44,22 +63,25 @@ Universaalit patternit (suomeksi):
 
 ## Asennus
 
-### Claude Code
+### AI-koodiagentit – aluksi Claude Code ja OpenAI Codex
 
 ```bash
-# Kloonaa suoraan skills-kansioon
-git clone https://github.com/janneikola/suomettaja-skill ~/.claude/skills/suomettaja
+# Claude Code
+git clone https://github.com/uduntuntu/kielenhuolto-kyky ~/.claude/skills/kielenhuolto
+
+# OpenAI Codex
+git clone https://github.com/uduntuntu/kielenhuolto-kyky ~/.codex/skills/kielenhuolto
 ```
 
-Skill aktivoituu automaattisesti seuraavassa Claude Code -sessiossa.
+Kyky aktivoituu automaattisesti seuraavassa Claude Code- tai Codex-sessiossa.
 
 ### Manuaalinen asennus
 
 1. Lataa tai kloonaa tämä repo
-2. Kopioi kansio `~/.claude/skills/suomettaja/`
+2. Kopioi kansio käyttämäsi agentin skills-kansioon: `~/.claude/skills/kielenhuolto/` tai `~/.codex/skills/kielenhuolto/`
 3. Varmista rakenne:
    ```
-   ~/.claude/skills/suomettaja/
+   ~/.claude/skills/kielenhuolto/
      SKILL.md
      references/
        kielioppi.md
@@ -72,15 +94,15 @@ Skill aktivoituu automaattisesti seuraavassa Claude Code -sessiossa.
 
 ## Käyttö
 
-Skill triggeröityy automaattisesti kun:
+Kyky aktivoituu automaattisesti kun:
 - Kirjoitat tai muokkaat suomenkielistä tekstiä
-- Pyydät "humanisoimaan", "oikolukemaan" tai "parantamaan" suomea
-- Teksti kuulostaa robottimaaiselta tai käyttää anglismeja
+- Pyydät "humanisoimaan", "oikolukemaan", "huolittelemaan" tai "parantamaan" suomea
+- Teksti kuulostaa robottimaiselta tai käyttää anglismeja
 
 Voit myös kutsua sitä suoraan:
 
 ```
-Suometa tämä teksti: [teksti]
+Huolittele tämä teksti: [teksti]
 ```
 
 ```
@@ -93,17 +115,17 @@ Oikolue ja luonnollista: [teksti]
 > Tämä on erittäin merkittävä kehitysaskel, joka tulee vaikuttamaan laajasti alan tulevaisuuteen. On syytä huomata, että kyseinen innovaatio tarjoaa lukuisia mahdollisuuksia eri sidosryhmille. Haasteista huolimatta tulevaisuus näyttää valoisalta.
 
 **Jälkeen:**
-> Iso juttu alalle. En ole varma mihin tämä lopulta johtaa, mutta hyötyjiä on — varsinkin ne jotka ovat odottaneet tällaista jo vuosia.
+> Iso juttu alalle. En ole varma mihin tämä lopulta johtaa, mutta hyötyjiä on – varsinkin ne jotka ovat odottaneet tällaista jo vuosia.
 
 ---
 
 ## Tiedostorakenne
 
 ```
-suomettaja/
-  SKILL.md                  # Pääskilli: rooli, prosessi, säännöt
+kielenhuolto/
+  SKILL.md                  # Pääkyky: rooli, prosessi, säännöt
   references/
-    patterns.md             # Kaikki 26 AI-patternia esimerkkeineen
+    patterns.md             # Kaikki 27 AI-patternia esimerkkeineen
     kielioppi.md            # Kielitoimiston ohjepankin säännöt
   custom_references/        # Omat lisäreferenssit (brändin ääni, sanastot)
     README.md
@@ -117,12 +139,12 @@ suomettaja/
 
 ## Mukautukset
 
-Voit laajentaa Suomettajaa omilla tiedostoilla ilman että pohjaskilliä muokataan. Kaksi kansiota:
+Voit laajentaa Kielenhuolto-kykyä omilla tiedostoilla ilman että tätä kykyä (engl. skill) muokataan. Kaksi kansiota:
 
-- **`custom_references/`** — kuvaileva taustamateriaali: brändin ääni, sanastot, hyvät esimerkit, kohdeyleisön kuvaus
-- **`custom_rules/`** — käskevät direktiivit: kielletyt sanat, pakolliset termit, projektikohtaiset tyylivalinnat
+- **`custom_references/`** – kuvaileva taustamateriaali: brändin ääni, sanastot, hyvät esimerkit, kohdeyleisön kuvaus
+- **`custom_rules/`** – käskevät direktiivit: kielletyt sanat, pakolliset termit, projektikohtaiset tyylivalinnat
 
-Lisää vain `.md`-tiedostoja kansioihin. Suomettaja lukee ne automaattisesti seuraavassa käytössä.
+Lisää vain `.md`-tiedostoja kansioihin. Kielenhuolto-kyky lukee ne automaattisesti seuraavassa käytössä.
 
 **Esimerkki:**
 
@@ -142,10 +164,10 @@ Tarkemmat ohjeet ja esimerkit: [`custom_references/README.md`](custom_references
 
 ## Lähteet
 
-Skill yhdistää kaksi MIT-lisensoitua avoimen lähdekoodin projektia:
+Kyky yhdistää kaksi MIT-lisensoitua avoimen lähdekoodin projektia:
 
-- **[Hakku/finnish-humanizer](https://github.com/Hakku/finnish-humanizer)** — 26 AI-patternia ja suomalaisen kirjoittajaäänen kuvaus
-- **[akunikkola/suomi-finnish-skill](https://github.com/akunikkola/suomi-finnish-skill)** — Kielitoimiston ohjepankkiin perustuva kielioppiohjeistus
+- **[Hakku/finnish-humanizer](https://github.com/Hakku/finnish-humanizer)** – 27 AI-patternia ja suomalaisen kirjoittajaäänen kuvaus
+- **[akunikkola/suomi-finnish-skill](https://github.com/akunikkola/suomi-finnish-skill)** – Kielitoimiston ohjepankkiin perustuva kielioppiohjeistus
 
 Kielioppisäännöt perustuvat:
 - [Kielitoimiston ohjepankki](https://kielitoimistonohjepankki.fi/)
@@ -156,4 +178,4 @@ Kielioppisäännöt perustuvat:
 
 ## Lisenssi
 
-MIT — ks. [LICENSE](LICENSE)
+MIT – ks. [LICENSE](LICENSE)

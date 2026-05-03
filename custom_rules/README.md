@@ -1,31 +1,31 @@
 # custom_rules/
 
-Tähän kansioon voit lisätä omia **sääntötiedostoja**, jotka Suomettaja noudattaa automaattisesti. Säännöt ovat käskeviä direktiivejä: aina näin, ei koskaan noin, korvaa X sanalla Y.
+Tähän kansioon voit lisätä omia **sääntötiedostoja**, joita Kielenhuolto-kyky noudattaa automaattisesti. Säännöt ovat käskeviä direktiivejä: aina näin, ei koskaan noin, korvaa X sanalla Y.
 
-Pohjasäännöt (`SKILL.md`, `references/kielioppi.md`, `references/patterns.md`) pysyvät aina voimassa. Tämä kansio **laajentaa tai ohittaa** niitä tyylivalintojen osalta. Huom: kielioppi- ja oikeinkirjoitussääntöjä ei voi ohittaa — niiden rikkominen olisi virhe, ei tyylivalinta.
+Pohjasäännöt (`SKILL.md`, `references/kielioppi.md`, `references/patterns.md`) pysyvät aina voimassa. Tämä kansio **laajentaa tai ohittaa** niitä tyylivalintojen osalta. Huom: kielioppi- ja oikeinkirjoitussääntöjä ei voi ohittaa – niiden rikkominen olisi virhe, ei tyylivalinta.
 
 ## Mihin tätä käytetään
 
-- **Kielletyt sanat** — sanat joita et koskaan halua tekstiin
-- **Pakolliset termit** — kuinka brändin tai tuotteen nimi kirjoitetaan
-- **Korvaussäännöt** — "kun näet X, käytä Y"
-- **Tyyliohjeet** — "vältä emojit aina", "käytä aina sinutteluja"
-- **Projektikohtaiset reunaehdot** — "tämän asiakkaan teksteissä ei koskaan passiivia"
+- **Kielletyt sanat** – sanat joita et koskaan halua tekstiin
+- **Pakolliset termit** – kuinka brändin tai tuotteen nimi kirjoitetaan
+- **Korvaussäännöt** – "kun näet X, käytä Y"
+- **Tyyliohjeet** – "vältä emojit aina", "käytä aina sinutteluja"
+- **Projektikohtaiset reunaehdot** – "tämän asiakkaan teksteissä ei koskaan passiivia"
 
 ## Miten lisätä sääntö
 
 1. Luo `.md`-tiedosto tähän kansioon (esim. `kielletyt_sanat.md`, `brandin_termit.md`)
 2. Kirjoita säännöt selkeästi: mitä tehdä, mitä ei, miksi
-3. Suomettaja lukee tiedoston automaattisesti ja noudattaa sääntöjä korjausprosessin kaikissa vaiheissa
+3. Kielenhuolto-kyky lukee tiedoston automaattisesti ja noudattaa sääntöjä korjausprosessin kaikissa vaiheissa
 
 ## Sääntöhierarkia
 
-1. **Kielioppi ja oikeinkirjoitus** (pohja, `references/kielioppi.md`) — aina voimassa, ei ohitettavissa
-2. **AI-patternit** (pohja, `references/patterns.md`) — aina voimassa
-3. **Omat säännöt** (`custom_rules/`) — tyylivalinnat ja projektikohtaiset reunaehdot
-4. **Käyttäjän istuntokohtaiset ohjeet** — ylin prioriteetti, voivat väliaikaisesti ohittaa omat säännöt
+1. **Kielioppi ja oikeinkirjoitus** (pohja, `references/kielioppi.md`) – aina voimassa, ei ohitettavissa
+2. **AI-patternit** (pohja, `references/patterns.md`) – aina voimassa
+3. **Omat säännöt** (`custom_rules/`) – tyylivalinnat ja projektikohtaiset reunaehdot
+4. **Käyttäjän istuntokohtaiset ohjeet** – ylin prioriteetti, voivat väliaikaisesti ohittaa omat säännöt
 
-Jos `custom_rules/`-sääntö on ristiriidassa kieliopin kanssa, Suomettaja kysyy käyttäjältä miten toimia.
+Jos `custom_rules/`-sääntö on ristiriidassa kieliopin kanssa, Kielenhuolto-kyky kysyy käyttäjältä, miten toimia.
 
 ## Esimerkkitiedostoja
 
@@ -62,8 +62,8 @@ custom_rules/
 - Taivutettuna: Acme Oy:n, Acme Oy:llä
 
 ## Tuotteet
-- **Acme Cloud** (iso A, iso C, välilyönti) — ei "Acme-pilvi" tai "acmecloud"
-- **Acme Desk** — aina englanniksi, ei "Acme Työpöytä"
+- **Acme Cloud** (iso A, iso C, välilyönti) – ei "Acme-pilvi" tai "acmecloud"
+- **Acme Desk** – aina englanniksi, ei "Acme Työpöytä"
 ```
 
 ## Ero `custom_references/`-kansioon
@@ -75,4 +75,4 @@ Nyrkkisääntö: jos sisältö alkaa sanoilla "älä koskaan", "aina", "korvaa",
 
 ## Versionhallinta
 
-Tiedostot tässä kansiossa on oletuksena ignoroitu `.gitignore`ssa, jotta `git pull` ei riko omia mukautuksiasi. Jos haluat versioida omat säännöt, tee niille oma repo tai poista ignore-sääntö paikallisesti.
+Tiedostot tässä kansiossa on oletuksena ignoroitu `.gitignore`ssa, jotta `git pull` ei riko omia mukautuksiasi. Jos haluat versioida omat sääntösi, tee niille oma repo tai poista ignore-sääntö paikallisesti.

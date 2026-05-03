@@ -1,0 +1,12 @@
+{
+  "references/kielioppi.md": {
+    "submodule": "upstream/suomettaja-skill",
+    "upstream_commit": "19535d188c461d4f2da4fd322970afc407d18673",
+    "upstream_path": "references/kielioppi.md"
+  },
+  "references/patterns.md": {
+    "submodule": "upstream/finnish-humanizer",
+    "upstream_commit": "7a151e26b263a5ccd993a84ae224744138296982",
+    "upstream_path": "finnish-humanizer/references/patterns.md"
+  }
+}

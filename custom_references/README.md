@@ -1,6 +1,6 @@
 # custom_references/
 
-Tähän kansioon voit lisätä omia **referenssitiedostoja**, jotka Kielenhuolto-kyky lukee automaattisesti osaksi kontekstiaan. Referenssit ovat kuvailevaa taustamateriaalia: brändin ääni, sanasto, esimerkkejä hyvästä tekstistä ja toimialasanakirjat.
+Tähän kansioon voit lisätä omia **referenssitiedostoja**, jotka Kielenhuolto-kyky lukee automaattisesti osaksi kontekstiaan. Referenssit ovat kuvailevaa taustamateriaalia: brändin ääni, sanasto, hyvät esimerkkitekstit ja toimialasanakirjat.
 
 Pohjareferenssit (`references/patterns.md`, `references/kielioppi.md`) pysyvät aina voimassa. Tämä kansio **laajentaa** niitä.
 

@@ -6,7 +6,7 @@ Pohjasäännöt (`SKILL.md`, `references/kielioppi.md`, `references/patterns.md`
 
 ## Mihin tätä käytetään
 
-- **Kielletyt sanat** – sanat joita et koskaan halua tekstiin
+- **Kielletyt sanat** – sanat, joita et koskaan halua tekstiin
 - **Pakolliset termit** – kuinka brändin tai tuotteen nimi kirjoitetaan
 - **Korvaussäännöt** – "kun näet X, käytä Y"
 - **Tyyliohjeet** – "vältä emojit aina", "käytä aina sinutteluja"
